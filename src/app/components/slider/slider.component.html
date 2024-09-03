@@ -1,10 +1,10 @@
 <div *ngIf="movies$ | async as movies">
-  <div *ngFor="let movie of movies.results" class="slider">
+  <div class="slider" *ngFor="let movie of movies.results">
     <div class="slide">
       <div class="slide-bg">
         <img
-          src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg"
-          alt=""
+          src="{{ 'https://image.tmdb.org/t/p/w500/' + movie.backdrop_path }}"
+          alt="immagine"
         />
       </div>
       <div class="slide-pane">
