@@ -1,14 +1,15 @@
-<a href="show-item">
+<a class="show-item" *ngIf="showItem">
   <div class="show-item-rating">
-    <i class="pi pi-star-fill"></i>
-    <span>voto</span>
+    <i class="pi pi-star"></i>
+    <span>{{ showItem.vote_average }} / 10</span>
   </div>
   <div class="show-item-image">
     <img
-      src="https://image.tmdb.org/t/p/w500//mu3lEhGovyhKHPJzb7HNYtZUCDT.jpg
-        "
-      alt=""
+      src="{{ [imgUrl] + showItem.backdrop_path }}"
+      alt="{{ showItem.original_title }}"
     />
   </div>
-  <div class="show-item-title">titolo</div>
+  <div class="show-item-title">
+    {{ showItem.original_title }}
+  </div>
 </a>
