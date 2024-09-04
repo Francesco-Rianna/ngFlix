@@ -7,7 +7,7 @@ import { MoviesService } from '../../services/movies.service'
 })
 export class SliderComponent {
   constructor(private moviesServices: MoviesService) {}
-  movies$ = this.moviesServices.getPopularMovies()
+  movies$ = this.moviesServices.getMoviesByType('popular')
   slideIndex = 0
   nextSlide() {
     this.slideIndex++
