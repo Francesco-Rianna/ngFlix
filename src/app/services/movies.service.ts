@@ -10,9 +10,9 @@ export class MoviesService {
   private apiUrl = 'https://api.themoviedb.org/3'
   private apiKey = '529c294d65945fb1d00328a50b68c6d5'
   constructor(private http: HttpClient) {}
-  getMoviesByType(type: string) {
+  getMoviesByType(type: string, count = 20) {
     return this.http
       .get<MoviesDto>(`${this.apiUrl}/movie/${type}?api_key=${this.apiKey}`)
-      .pipe(map((data) => data.results))
+      .pipe(map((data) => data.results.slice(0, count)))
   }
 }
