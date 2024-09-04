@@ -6,17 +6,25 @@ import { MoviesDto } from '../types/movie'
   providedIn: 'root',
 })
 export class MoviesService {
+  private apiUrl = 'https://api.themoviedb.org/3'
+  private apiKey = '529c294d65945fb1d00328a50b68c6d5'
   constructor(private http: HttpClient) {}
 
   getPopularMovies() {
     return this.http.get<MoviesDto>(
-      'https://api.themoviedb.org/3/movie/popular?api_key=529c294d65945fb1d00328a50b68c6d5'
+      `${this.apiUrl}/movie/popular?api_key=${this.apiKey}`
     )
   }
 
   getUpcomingrMovies() {
     return this.http.get<MoviesDto>(
-      'https://api.themoviedb.org/3/movie/upcoming?api_key=529c294d65945fb1d00328a50b68c6d5'
+      `${this.apiUrl}/movie/upcoming?api_key=${this.apiKey}`
+    )
+  }
+
+  getTopRatedMovies() {
+    return this.http.get<MoviesDto>(
+      `${this.apiUrl}/movie/top_rated?api_key=${this.apiKey}`
     )
   }
 }
