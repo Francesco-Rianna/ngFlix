@@ -12,7 +12,7 @@ export class SliderComponent {
   nextSlide() {
     this.slideIndex++
     this.movies$.subscribe((movies) => {
-      if (this.slideIndex >= movies.results.length) {
+      if (this.slideIndex >= movies.length) {
         this.slideIndex = 0
       }
     })
