@@ -1,6 +1,9 @@
-<div *ngIf="movies$ | async as movies">
-  <div class="slider" *ngFor="let movie of movies.results">
-    <div class="slide">
+<div class="slider" *ngIf="movies$ | async as movies">
+  <div
+    class="slide"
+    *ngFor="let movie of movies.results; let movieIndex = index"
+  >
+    <ng-container *ngIf="movieIndex === slideIndex">
       <div class="slide-bg">
         <img
           src="{{ 'https://image.tmdb.org/t/p/w500/' + movie.backdrop_path }}"
@@ -8,7 +11,7 @@
         />
       </div>
       <div class="slide-pane">
-        <h2 class="title">{{ movie.original_title }}</h2>
+        <h2 class="title">{{ movie.original_name }}</h2>
         <div class="meta">
           <div class="rating">
             <i class="pi pi-star-fill"></i>
@@ -18,7 +21,7 @@
             <i class="pi pi-users"></i>
             <span>{{ movie.popularity }}</span>
           </div>
-          <div class="relaese-date">
+          <div class="release-date">
             <i class="pi pi-calendar"></i>
             <span>{{ movie.first_air_date }}</span>
           </div>
@@ -26,6 +29,12 @@
         </div>
         <div class="description">text go here</div>
       </div>
-    </div>
+    </ng-container>
   </div>
+  <button class="previus-slide-btn" (click)="previusSlide()">
+    <i class="pi pi-caret-left"></i>
+  </button>
+  <button class="next-slide-btn" (click)="nextSlide()">
+    <i class="pi pi-caret-right"></i>
+  </button>
 </div>
