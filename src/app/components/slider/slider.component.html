@@ -5,7 +5,10 @@
   >
     <ng-container *ngIf="movieIndex === slideIndex">
       <div class="slide-bg">
-        <img src="{{ [imgUrl] + movie.backdrop_path }}" alt="immagine" />
+        <img
+          src="{{ [imgUrl] + movie.backdrop_path }}"
+          alt="{{ movie.original_title }}"
+        />
       </div>
       <div class="slide-pane">
         <h2 class="title">{{ movie.original_title }}</h2>
