@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
 import { MoviesService } from '../../services/movies.service'
 @Component({
   selector: 'app-slider',

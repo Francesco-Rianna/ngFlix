@@ -10,7 +10,13 @@ export class MoviesService {
 
   getPopularMovies() {
     return this.http.get<MoviesDto>(
-      'https://api.themoviedb.org/3/discover/tv?api_key=529c294d65945fb1d00328a50b68c6d5'
+      'https://api.themoviedb.org/3/movie/popular?api_key=529c294d65945fb1d00328a50b68c6d5'
+    )
+  }
+
+  getUpcomingrMovies() {
+    return this.http.get<MoviesDto>(
+      'https://api.themoviedb.org/3/movie/upcoming?api_key=529c294d65945fb1d00328a50b68c6d5'
     )
   }
 }

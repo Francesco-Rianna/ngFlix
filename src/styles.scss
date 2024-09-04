@@ -5,8 +5,20 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  color: white;
+  background-color: #141414;
 }
 
 h1 {
   font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  padding: 0.5rem;
+  margin: 0.5rem;
 }

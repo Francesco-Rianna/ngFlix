@@ -8,7 +8,7 @@
         <img src="{{ [imgUrl] + movie.backdrop_path }}" alt="immagine" />
       </div>
       <div class="slide-pane">
-        <h2 class="title">{{ movie.original_name }}</h2>
+        <h2 class="title">{{ movie.original_title }}</h2>
         <div class="meta">
           <div class="rating">
             <i class="pi pi-star-fill"></i>
@@ -20,7 +20,7 @@
           </div>
           <div class="release-date">
             <i class="pi pi-calendar"></i>
-            <span>{{ movie.first_air_date }}</span>
+            <span>{{ movie.release_date }}</span>
           </div>
           <div class="description">{{ movie.overview }}</div>
         </div>
