@@ -22,4 +22,6 @@ export class SliderComponent {
       this.slideIndex--
     }
   }
+
+  imgUrl = 'https://image.tmdb.org/t/p/w500/'
 }
