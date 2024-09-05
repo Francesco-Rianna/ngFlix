@@ -1,5 +1,5 @@
-<div class="slider" *ngIf="movies$ | async as movies">
-  <div class="slide" *ngFor="let movie of movies; let movieIndex = index">
+<div class="slider" *ngIf="slides">
+  <div class="slide" *ngFor="let movie of slides; let movieIndex = index">
     <ng-container *ngIf="movieIndex === slideIndex">
       <div class="slide-bg">
         <img
@@ -28,10 +28,14 @@
       </div>
     </ng-container>
   </div>
-  <button class="previus-slide-btn" (click)="previusSlide()">
+  <button
+    class="previus-slide-btn"
+    *ngIf="!isDetailPage"
+    (click)="previusSlide()"
+  >
     <i class="pi pi-caret-left"></i>
   </button>
-  <button class="next-slide-btn" (click)="nextSlide()">
+  <button class="next-slide-btn" *ngIf="!isDetailPage" (click)="nextSlide()">
     <i class="pi pi-caret-right"></i>
   </button>
 </div>
