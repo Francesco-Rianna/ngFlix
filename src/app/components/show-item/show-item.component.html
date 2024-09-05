@@ -5,8 +5,8 @@
   </div>
   <div class="show-item-image">
     <img
-      src="{{ [imgUrl] + showItem.backdrop_path }}"
-      alt="{{ showItem.original_title }}"
+      [src]="imgUrl + 'w500' + showItem.backdrop_path"
+      [alt]="showItem.original_title"
     />
   </div>
   <div class="show-item-title">

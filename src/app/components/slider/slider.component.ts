@@ -3,6 +3,7 @@ import { MoviesService } from '../../services/movies.service'
 import { Movie } from '../../types/movie'
 import { Router, NavigationEnd } from '@angular/router'
 import { filter } from 'rxjs/operators' // Per filtrare gli eventi di navigazione
+import { imagesBaseUrl } from '../../constants/imagez-size'
 
 @Component({
   selector: 'app-slider',
@@ -55,5 +56,5 @@ export class SliderComponent implements OnInit {
     }
   }
 
-  imgUrl = 'https://image.tmdb.org/t/p/w500/'
+  imgUrl = imagesBaseUrl
 }
