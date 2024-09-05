@@ -1,6 +1,8 @@
 @import '../node_modules/modern-normalize/modern-normalize.css';
 @import '../node_modules/primeflex/primeflex.css';
 @import 'primeicons/primeicons.css';
+@import 'primeng/resources/themes/md-dark-indigo/theme.css';
+@import 'primeng/resources/primeng.css';
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -15,7 +17,6 @@ h1 {
 
 a {
   text-decoration: none;
-  color: inherit;
 }
 
 .container {
