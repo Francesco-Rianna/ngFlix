@@ -13,7 +13,7 @@ export class MoviesService {
   private apiKey = '529c294d65945fb1d00328a50b68c6d5'
   constructor(private http: HttpClient) {}
   // funzione che prende i film per tipo dove type è flessibile per il tipo di api ricevuta *guarda componente home.component.ts
-  // riga 17 pipe map funzione che filtra la chiamata per numero dove count è la variabile inserita nel componente home.component
+  // riga 17  funzione slice  che filtra la chiamata per numero dove count è la variabile inserita nel componente home.component
   getMoviesByType(type: string, count = 20) {
     return this.http
       .get<MoviesDto>(`${this.apiUrl}/movie/${type}?api_key=${this.apiKey}`)
@@ -25,6 +25,7 @@ export class MoviesService {
       `${this.apiUrl}/movie/${id}?api_key=${this.apiKey}`
     )
   }
+
   getMovieVideos(id: string) {
     return this.http
       .get<VideosDto>(
