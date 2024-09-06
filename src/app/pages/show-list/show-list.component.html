@@ -4,7 +4,12 @@
       <span class="p-input-icon-left">
         <i class="pi pi-search"></i>
         <!-- ng model prende la variabile della chiamata di movie list   -->
-        <input type="text" pInputText [(ngModel)]="searchValue" />
+        <input
+          type="text"
+          pInputText
+          [(ngModel)]="searchValue"
+          (change)="searchChanged()"
+        />
       </span>
     </div>
   </div>
