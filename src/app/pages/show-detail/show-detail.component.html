@@ -97,3 +97,6 @@
 <ng-template #defaultActorPhoto>
   <img src="/assets/images/actor.jpg" alt="No Pitcure" />
 </ng-template>
+<ng-container *ngIf="showSimilar$ | async as showsSimilar">
+  <app-banner title="Watch Similar" [shows]="showsSimilar" />
+</ng-container>

@@ -19,6 +19,7 @@ export class ShowDetailComponent implements OnInit {
   showVideos$: Observable<Video[]> | null = null
   showImages$: Observable<Image[]> | null = null
   showCast$: Observable<Actor[]> | null = null
+  showSimilar$: Observable<Movie[]> | null = null
   imagesSizes = IMAGES_SIZES
   constructor(
     private router: ActivatedRoute,
@@ -31,5 +32,6 @@ export class ShowDetailComponent implements OnInit {
     this.showVideos$ = this.moviesService.getMovieVideos(this.showId)
     this.showImages$ = this.moviesService.getMovieImages(this.showId)
     this.showCast$ = this.moviesService.getMovieCast(this.showId)
+    this.showSimilar$ = this.moviesService.getSimilarMovies(this.showId)
   }
 }
