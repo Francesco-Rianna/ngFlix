@@ -52,10 +52,20 @@ export class MoviesService {
   }
 
   getSimilarMovies(id: string) {
+    return (
+      this.http
+        // faccio la chiamata api  che richiama il modulo Moviesdto
+        .get<MoviesDto>(
+          `${this.apiUrl}/movie/${id}/similar?api_key=${this.apiKey}`
+        )
+        .pipe(map((data) => data.results.slice(0, 12)))
+    )
+  }
+  searchMovies(page: number, searchValue?: string) {
     return this.http
       .get<MoviesDto>(
-        `${this.apiUrl}/movie/${id}/similar?api_key=${this.apiKey}`
+        `${this.apiUrl}/search/movie?query=${searchValue}&page=${page}&api_key=${this.apiKey}`
       )
-      .pipe(map((data) => data.results.slice(0, 12)))
+      .pipe(map((data) => data.results))
   }
 }
