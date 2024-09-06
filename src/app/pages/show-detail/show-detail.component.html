@@ -50,8 +50,8 @@
     <p-tabPanel header="Videos">
       <ng-container *ngIf="showVideos$ | async as showVideos">
         <div class="grid">
-          <div class="col-4">
-            {{ showVideos | json }}
+          <div class="col-4" *ngFor="let showVideo of showVideos">
+            <app-video-embed></app-video-embed>
           </div>
         </div>
       </ng-container>

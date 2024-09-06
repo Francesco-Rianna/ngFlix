@@ -12,6 +12,7 @@ import { Video } from '../../types/video'
 })
 export class ShowDetailComponent implements OnInit {
   showId = ''
+  // observable serve as
   show$: Observable<Movie> | null = null
   showVideos$: Observable<Video[]> | null = null
   imagesSizes = IMAGES_SIZES
