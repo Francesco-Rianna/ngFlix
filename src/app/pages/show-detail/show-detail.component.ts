@@ -32,6 +32,7 @@ export class ShowDetailComponent implements OnInit {
     this.showVideos$ = this.moviesService.getMovieVideos(this.showId)
     this.showImages$ = this.moviesService.getMovieImages(this.showId)
     this.showCast$ = this.moviesService.getMovieCast(this.showId)
+    // recupero la chiamata fatta nel service
     this.showSimilar$ = this.moviesService.getSimilarMovies(this.showId)
   }
 }

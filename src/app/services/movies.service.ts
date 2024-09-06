@@ -61,6 +61,8 @@ export class MoviesService {
         .pipe(map((data) => data.results.slice(0, 12)))
     )
   }
+
+  // funzione ricerca film con due parametri page e search value dove search value equivale alla scritta dell'utente
   searchMovies(page: number, searchValue?: string) {
     return this.http
       .get<MoviesDto>(

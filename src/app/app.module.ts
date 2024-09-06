@@ -17,8 +17,10 @@ import { ShowDetailComponent } from './pages/show-detail/show-detail.component'
 import { TabViewModule } from 'primeng/tabview'
 import { VideoEmbedComponent } from './components/video-embed/video-embed.component'
 import { ImageModule } from 'primeng/image'
-import { CarouselModule } from 'primeng/carousel';
+import { CarouselModule } from 'primeng/carousel'
 import { ShowListComponent } from './pages/show-list/show-list.component'
+import { InputTextModule } from 'primeng/inputtext'
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { ShowListComponent } from './pages/show-list/show-list.component'
     TabViewModule,
     ImageModule,
     CarouselModule,
+    InputTextModule,
+    FormsModule,
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
