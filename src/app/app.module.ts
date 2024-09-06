@@ -18,6 +18,7 @@ import { ShowDetailComponent } from './pages/show-detail/show-detail.component'
 import { TabViewModule } from 'primeng/tabview'
 import { VideoEmbedComponent } from './components/video-embed/video-embed.component'
 import { ImageModule } from 'primeng/image'
+import { CarouselModule } from 'primeng/carousel'
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ImageModule } from 'primeng/image'
     HttpClientModule,
     TabViewModule,
     ImageModule,
+    CarouselModule,
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
